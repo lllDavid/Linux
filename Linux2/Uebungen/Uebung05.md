@@ -89,10 +89,3 @@ werden! (nur die erste Zeile!)
 Lösung:
 
 
-### Zahlen finden 
-bash randomints.sh | grep -P '^4(?=0)\d\d\d$' 
-
-
-### Namen finden
- grep -E '\-[Dd]atei' dateien.md
-
