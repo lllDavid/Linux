@@ -62,9 +62,21 @@ grep "\bwerden.*einem\b" dateien.md  -- triviale Lösung
 grep -E "\bwerden\b (\b\S*\b )*\beinem\b" dateien.md
 
 ### f)
-grep -E "([0-9]{1,3}\.)\1\1([0-9]{1,3})" netzwerk.md
+`grep -P '\s\d+\.(\d+\.)\1\d+' netzwerk.md`
 
-funktioniert so nicht richtig wegen "greedy matching" - weitere Analyse notwendig
+oder
+
+`grep -P '\d+\.\d+' netzwerk.md`
+
+Es bestehen subtile Unterschiede; die zweite Lösung findet 3x 1-3 Ziffern,
+gefolgt von einem Punkt, während die erste Whitespace, gefolgt von den ersten 3
+Ziffern plus Punkt findet; dann in einer seperaten Suche die folgenden 3 Ziffern
+plus Punkt - die "0.", die wir in diesem Falle mit Klammerung und "\1"
+wiederholen können, um die zweite "0." finden zu können.
+Beachte: Klammerungen und Referenzen können nicht verschiedene Dinge finden.
+'(\d+\.)\1\1' funktioniert also nicht, um die ersten drei Ziffern/Punkt-Gruppen
+zu markieren: Die erste Gruppe beinhaltet "127" während die anderen beiden "0"
+beinhalten. Dabei kommen Regex an ihre Grenzen!
 
 ### g)
 grep -E "([Uu]ser).*\1" dateien.md

@@ -70,22 +70,22 @@ Lösung: grep -E "\bwerden(.*)einem\b" dateien.md
 ### f)
 Kurzer Rückausflug zur `netzwerk.md`: Finde die dort enthaltene IP-Addresse
 nochmals, mit einer jetzt möglichst etwas verfeinerten Methode!
-Lösung: grep -E "()
+Lösung: grep -E "([0-9]{1,3}\.)\1\1([0-9]{1,3})" netzwerk.md
 
 ### g)
 Finde alle Vorkommnisse von je zwei Strings auf einer Zeile, die "User"
 oder "user" beinhalten!
-Lösung:
+Lösung: grep -E "([Uu]ser).*\1" dateien.md
 
 
 ### h)
 Finde Vorkommen von Wörtern, die mit "Datei-" starten und mit "Endungen",
 "Erkennung" oder "Typen" enden!
-Lösung:
+Lösung: grep -E "\bDatei-(Endungen|Erkennung|Typen)\b" dateien.md
 
 ### i)
 Finde die Zeilen, in denen die Sticky-, Setuid- und Setgid- "bit"s vorgestellt
 werden! (nur die erste Zeile!)
-Lösung:
+Lösung: grep -E "^- (Setuid|Setgid|Sticky)-bit" dateien.md
 
 
