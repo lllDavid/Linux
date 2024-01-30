@@ -1,0 +1,97 @@
+Local Area Network (LAN)
+
+Ein Local Area Network (zu Deutsch lokales oder örtliches Netzwerk), kurz LAN,
+ist ein Rechnernetz, das die Ausdehnung von Personal Area Networks übertrifft,
+die Ausdehnung von Metropolitan Area Networks, Wide Area Networks und Global
+Area Networks aber nicht erreicht. Ein LAN wird z. B. in Heimnetzen oder
+Unternehmen eingesetzt.
+
+Technikvarianten allgemein:
+Infrastruktur-Verkabelung
+
+Ein lokales Netz kann technisch unterschiedlich aufgebaut werden. Typischerweise
+erfolgt die Verkabelung eines LANs ab einer gewissen Größe als strukturierte
+Verkabelung. Ethernet ist der am weitesten verbreitete Standard. Dabei erfolgt
+die Übertragung entweder elektrisch über Twisted-Pair-Kabel (CAT5 oder höher)
+oder optisch über Lichtwellenleiter aus Glasfaser oder Kunststoff.
+
+Ethernet
+
+Aktuelles Ethernet deckt Datenübertragungsraten von 10 Mbit/s bis 400 Gbit/s ab
+(entspricht maximal 50 GByte/s Datendurchsatz). Bei der heute am häufigsten
+verwendeten, kupferbasierten Twisted-Pair-Verkabelung (TP) beträgt der
+Netzwerkradius in der Regel maximal hundert Meter, mit Multimode-Glasfaser
+einige hundert Meter und mit Monomode-Glasfaser standardisiert bis zu vierzig
+Kilometer. Fast-Ethernet 100BASE-TX und Gigabit-Ethernet 1000BASE-T sind
+innerhalb der Ethernet-Familie die am weitesten verbreiteten Varianten.
+Hauptsächlich für Rechenzentren und schnelle Zwischenverbindungen ist
+100-Gigabit-Ethernet verfügbar, abgesehen von kurzen Zwischenverbindungen
+benötigt es praktisch immer Glasfaser. 40-Gigabit-Ethernet für
+Twisted-Pair-Kabel sowie 2,5-, 5- und 25-Gigabit-Ethernet für etwas geringere
+Kabelgüten wurden ebenfalls entwickelt.
+
+Hub / Multiportrepeater
+
+Ein Hub ist ein Verteilerknoten in einem Netzwerk, der ein Repeater mit mehreren
+Ports ist. Werden mehr als zwei Computer in einem Netzwerk verbunden, kann dies
+über einen Hub realisiert werden. Mehrere Netzwerkkabel können auf einen Hub
+geführt werden, deshalb spricht man auf physischer Ebene von einem sternförmigen
+Aufbau. Im logischen Sinne ist jeder Teilnehmer mit allen anderen verbunden, es
+handelt sich um eine Bus-Topologie. In einem LAN können mehrere Hubs verwendet
+werden, um die Zahl der anschließbaren Komponenten zu erhöhen, dabei müssen aber
+Regeln eingehalten werden.
+
+Der Hub arbeitet nach einem ziemlich einfachen Prinzip: Er leitet von einem Port
+empfangene Bits oder Symbole an alle anderen Ports weiter. Empfängt der Hub
+Daten von zwei Ports gleichzeitig, so kommt es zu einer Kollision. Der Hub kann
+zwei Datenströme gleichzeitig weder weiterleiten noch speichern, kollidierende
+Datenübertragungen werden gestört und müssen unterbrochen werden. Ein Hub
+arbeitet grundsätzlich im Halbduplexbetrieb. Da in Hubs selbst keine
+Datenverarbeitung stattfindet und es sich um eine rein physikalische
+Signalverstärkung handelt, arbeiten sie nur in der OSI-Schicht 1
+(Bitübertragungsschicht)[1].
+Ab Gigabit-Ethernet werden keine Hubs mehr eingesetzt, auch für Fast Ethernet
+sind sie kaum mehr zu finden.
+
+Switch / Multiportbridge
+
+Ein Switch ist eine Mehrport-Bridge in einem Bauteil. Er verfügt im Gegensatz zu
+einem Hub über Logikfunktionen, um Daten zwischenzuspeichern und zu filtern.
+Eine Bridge leitet jedes empfangene Paket nur an den der jeweiligen
+Empfängeradresse (MAC-Adresse) zugeordneten Port weiter, so dass die physische
+Kommunikation auf Sender und Empfänger beschränkt bleibt („Packet Switching“).
+Die Leitungen der übrigen Teilnehmer werden nicht belastet und können andere
+Pakete transportieren. Sind nur geswitchte Ports in einem Netzwerk und keine
+Repeater vorhanden, spricht man im Technik-Jargon von einem „voll-geswitchten
+Netz“ (Mikrosegmentierung). Ein solches Netz arbeitet kollisionsfrei, und alle
+Kanäle erreichen die maximale Datenübertragungsrate. In heutigen Netzen werden
+daher kaum noch Hubs, sondern Switches eingesetzt.[2]
+
+Router
+
+Ein Router ermöglicht es, mehrere Netzwerke mit unterschiedlichen Protokollen
+bzw. Medien miteinander zu verbinden. Unter anderem verbindet ein Router WAN mit
+LAN. Er kann im Gegensatz zu einem Switch Netzwerkaddressen aus dem Layer 3
+auswerten, zum Beispiel den Netzwerkanteil aus IP-Adressen aus dem
+TCP/IP-Modell. Einen Router findet man häufig an den Außengrenzen eines
+Netzwerkes, um es mit dem Internet oder einem anderen Netzwerk zu verbinden.[3]
+LAN über Funk
+
+Drahtlose lokale Netze nennt man Wireless LAN (WLAN), sie werden meist über
+einen Standard aus der Gruppe IEEE 802.11 realisiert, die zum kabelgebundenen
+Ethernet weitgehend kompatibel sind. Da Funknetze nicht an Gebäude- oder
+Werksgrenzen halt machen, gibt es hier eine Besonderheit, die
+Verschlüsselungstechnik. Anfänglich wurde mit den mittlerweile unsicheren
+Standards WEP und WPA gearbeitet, die daher nicht mehr angewendet werden
+sollten. Der WPA2-Standard gilt zurzeit noch als sicher, obwohl auch bei diesem
+Sicherheitslücken festgestellt worden sind. Man spricht jedoch auch hier von
+poor-man’s-security, denn WLAN-Accesspoints und -Router werden unter enormem
+Kostendruck vermarktet. Inzwischen sollte der moderne WPA3-Standard verwendet
+werden. Als Absicherung bei Verwendung öffentlicher Hotspots sollte
+Opportunistic Wireless Encryption (OWE) verwendet werden. Es kann alternativ
+oder falls dem Netzanbieter nicht getraut wird ein VPN-Tunnel verwendet werden.
+LAN über das Strom- oder Telefonleitungsnetz
+Beide Techniken haben mit vergleichsweise hohen Abstrahlungsraten zu kämpfen,
+was zur Störung von Funkdiensten in der Umgebung führen kann. Für Stromleitungen
+sind verschiedene PowerLAN-Varianten verbreitet, für Telefonleitungen wird
+häufig VDSL verwendet.
